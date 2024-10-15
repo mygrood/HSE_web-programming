@@ -1,0 +1,14 @@
+{% extends 'base.html'%}
+{% load static %}
+
+{% block title %}{{ sign.name }}{% endblock %}
+
+{% block content %}
+    {% if error == ""%}
+        <h2>{{ sign.name }}</h2>
+        <img src="{% static sign.image %}" alt="{{ sign.name }}" style="width: 500px; height: auto;">
+        <p>{{ sign.description }}</p>
+    {% else %}
+     <h2>Нет знака</h2>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Все знаки зодиака{% endblock %}
+
+{% block content %}
+<h2>Список знаков зодиака</h2>
+<ul>
+    {% for sign in signs %}
+        <li><a href="{% url 'zodiac:show_sign' sign.name %}">{{ sign.name }}</a></li>
+    {% endfor %}
+</ul>
+{% endblock %}
