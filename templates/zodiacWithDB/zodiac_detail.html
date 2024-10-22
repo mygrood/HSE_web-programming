@@ -10,4 +10,10 @@
     </div>
     <p class="mt-3">{{ sign.description }}</p>
     <a href="{% url 'zodiacWithDB:zodiac_list' %}" class="btn btn-secondary">Назад к списку</a>
+
+    {% if error_message %}
+        <div class="alert alert-danger mt-4">
+            {{ error_message }}
+        </div>
+    {% endif %}
 {% endblock %}

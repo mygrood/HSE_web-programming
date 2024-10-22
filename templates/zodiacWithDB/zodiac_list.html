@@ -7,8 +7,8 @@
     <h1 class="text-center">Список Знаков Зодиака</h1>
     <div class="row">
         {% for sign in signs %}
-            <div class="col-md-4">
-                <div class="card mb-4 shadow-sm">
+            <div class="col-md-4 mb-4">
+                <div class="card">
                     <img src="{{ sign.image.url }}" class="card-img-top" alt="{{ sign.name }}">
                     <div class="card-body">
                         <h5 class="card-title">{{ sign.name }}</h5>

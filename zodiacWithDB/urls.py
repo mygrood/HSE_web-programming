@@ -5,5 +5,6 @@ app_name = 'zodiacWithDB'
 
 urlpatterns = [
     path('', views.zodiac_list, name='zodiac_list'),
-    path('<int:sign_id>/', views.zodiac_detail, name='zodiac_detail'),
+    path('<str:sign_id>/', views.zodiac_detail, name='zodiac_detail'),
 ]
+
