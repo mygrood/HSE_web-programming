@@ -1,0 +1,21 @@
+{% extends "zodiacWithDB/base.html" %}
+{% load static %}
+
+{% block title %}Список Знаков Зодиака{% endblock %}
+
+{% block content %}
+    <h1 class="text-center">Список Знаков Зодиака</h1>
+    <div class="row">
+        {% for sign in signs %}
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="{{ sign.image.url }}" class="card-img-top" alt="{{ sign.name }}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ sign.name }}</h5>
+                        <a href="{% url 'zodiacWithDB:zodiac_detail' sign.id %}" class="btn btn-primary">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

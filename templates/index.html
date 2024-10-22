@@ -8,13 +8,16 @@
 </head>
 <body>
     <h1>Веб-программирование</h1>
-    <p>Геометрия</p>
+    <p><a href="/admin/">Админка</a></p>
+    <h2>Геометрия</h2>
         <ul>
             <li><a href="{% url 'geometry:rectangle_area' width=5 height=10 %}">Площадь прямоугольника 5x10</a></li>
             <li><a href="{% url 'geometry:square_area' width=4 %}">Площадь квадрата 4x4</a></li>
             <li><a href="{% url 'geometry:circle_area' radius=7 %}">Площадь круга с радиусом 7</a></li>
         </ul> 
     <p><a href="{% url 'zodiac:show_all_signs' %}">Знаки зодиака</a></p>  
-    
+    <p><a href="{% url 'zodiacWithDB:zodiac_list' %}">Знаки зодиака с БД</a></p>
+</body>
+</html>
 </body>
 </html>
