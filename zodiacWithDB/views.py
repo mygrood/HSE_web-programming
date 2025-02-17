@@ -18,3 +18,4 @@ def zodiac_detail(request, sign_id):
         return render(request, 'zodiacWithDB/zodiac_detail.html', {'sign': sign})
     except (ZodiacSign.DoesNotExist, ValueError):
         return render(request, 'zodiacWithDB/404.html', status=404)
+

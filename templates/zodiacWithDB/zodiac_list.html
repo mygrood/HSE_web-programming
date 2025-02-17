@@ -5,6 +5,12 @@
 
 {% block content %}
     <h1 class="text-center">Список Знаков Зодиака</h1>
+     <form method="GET" action="{% url 'zodiacWithDB:zodiac_list' %}" class="mb-4">
+        <div class="input-group">
+            <input type="text" name="q" class="form-control" placeholder="Поиск по знаку" value="{{ request.GET.q }}">
+            <button class="btn btn-outline-secondary" type="submit">Найти</button>
+        </div>
+    </form>
     <div class="row">
         {% for sign in signs %}
             <div class="col-md-4 mb-4">
